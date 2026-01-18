@@ -1,0 +1,462 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AgriAssist Design System - Futuristic AgriTech Theme */
+
+@layer base {
+  :root {
+    /* Light Mode - Nature-inspired with modern touches */
+    --background: 120 20% 98%;
+    --foreground: 120 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 120 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 120 25% 15%;
+
+    /* Primary - Fresh Green (Main action color) */
+    --primary: 142 71% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Earth Brown */
+    --secondary: 30 45% 92%;
+    --secondary-foreground: 30 45% 25%;
+
+    /* Muted - Soft sage */
+    --muted: 120 15% 94%;
+    --muted-foreground: 120 10% 45%;
+
+    /* Accent - Sky Blue (Weather, Water) */
+    --accent: 200 85% 94%;
+    --accent-foreground: 200 85% 25%;
+
+    /* Status Colors */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 38 92% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders & Inputs */
+    --border: 120 15% 88%;
+    --input: 120 15% 88%;
+    --ring: 142 71% 35%;
+
+    --radius: 0.75rem;
+
+    /* Custom AgriAssist Colors */
+    --agri-leaf: 142 71% 35%;
+    --agri-earth: 30 45% 35%;
+    --agri-sky: 200 85% 55%;
+    --agri-sun: 38 92% 55%;
+    --agri-water: 195 100% 50%;
+    --agri-soil: 25 35% 30%;
+
+    /* Neon accents */
+    --neon-green: 142 100% 50%;
+    --neon-blue: 195 100% 55%;
+    --neon-orange: 25 100% 55%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(142, 71%, 35%) 0%, hsl(142, 71%, 45%) 50%, hsl(120, 60%, 40%) 100%);
+    --gradient-sky: linear-gradient(180deg, hsl(200, 85%, 55%) 0%, hsl(200, 85%, 75%) 100%);
+    --gradient-earth: linear-gradient(135deg, hsl(30, 45%, 35%) 0%, hsl(25, 35%, 30%) 100%);
+    --gradient-neon: linear-gradient(135deg, hsl(142, 100%, 50%) 0%, hsl(195, 100%, 55%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(120 25% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(120 25% 15% / 0.1), 0 2px 4px -2px hsl(120 25% 15% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(120 25% 15% / 0.1), 0 4px 6px -4px hsl(120 25% 15% / 0.1);
+    --shadow-glow: 0 0 20px hsl(142 71% 35% / 0.3);
+    --shadow-neon: 0 0 30px hsl(142 100% 50% / 0.4);
+
+    --sidebar-background: 120 20% 97%;
+    --sidebar-foreground: 120 25% 25%;
+    --sidebar-primary: 142 71% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 120 15% 94%;
+    --sidebar-accent-foreground: 120 25% 25%;
+    --sidebar-border: 120 15% 88%;
+    --sidebar-ring: 142 71% 35%;
+  }
+
+  .dark {
+    /* Dark Mode - Futuristic with neon accents */
+    --background: 150 30% 5%;
+    --foreground: 120 15% 95%;
+
+    --card: 150 25% 8%;
+    --card-foreground: 120 15% 95%;
+
+    --popover: 150 25% 8%;
+    --popover-foreground: 120 15% 95%;
+
+    --primary: 142 80% 45%;
+    --primary-foreground: 150 25% 5%;
+
+    --secondary: 30 25% 15%;
+    --secondary-foreground: 30 25% 90%;
+
+    --muted: 150 20% 15%;
+    --muted-foreground: 120 10% 60%;
+
+    --accent: 200 60% 20%;
+    --accent-foreground: 200 85% 85%;
+
+    --success: 142 80% 50%;
+    --success-foreground: 150 25% 5%;
+
+    --warning: 38 92% 55%;
+    --warning-foreground: 38 92% 10%;
+
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 20% 18%;
+    --input: 150 20% 18%;
+    --ring: 142 80% 45%;
+
+    /* Custom AgriAssist Colors - Brighter for dark mode */
+    --agri-leaf: 142 80% 50%;
+    --agri-earth: 30 50% 40%;
+    --agri-sky: 200 90% 60%;
+    --agri-sun: 38 95% 60%;
+    --agri-water: 195 100% 55%;
+    --agri-soil: 25 40% 35%;
+
+    /* Neon accents - More vibrant in dark mode */
+    --neon-green: 142 100% 55%;
+    --neon-blue: 195 100% 60%;
+    --neon-orange: 25 100% 60%;
+
+    --shadow-glow: 0 0 30px hsl(142 80% 45% / 0.4);
+    --shadow-neon: 0 0 40px hsl(142 100% 55% / 0.5);
+
+    --sidebar-background: 150 25% 7%;
+    --sidebar-foreground: 120 15% 90%;
+    --sidebar-primary: 142 80% 45%;
+    --sidebar-primary-foreground: 150 25% 5%;
+    --sidebar-accent: 150 20% 15%;
+    --sidebar-accent-foreground: 120 15% 90%;
+    --sidebar-border: 150 20% 18%;
+    --sidebar-ring: 142 80% 45%;
+  }
+
+  /* Dark Mode specific contrast fixes */
+  .dark .text-muted-foreground {
+    color: hsl(var(--muted-foreground) / 0.9) !important;
+  }
+
+  .dark .bg-card\/50 {
+    background-color: hsl(var(--card) / 0.6) !important;
+  }
+
+  /* Ensure helper text is readable */
+  .text-xs.text-muted-foreground {
+    @apply font-medium;
+  }
+
+  .dark .text-xs.text-muted-foreground {
+    color: hsl(var(--muted-foreground) / 0.8) !important;
+  }
+
+  /* Select/Dropdown fixes for dark mode */
+  .dark [role="combobox"] {
+    @apply border-primary/30;
+  }
+
+  .dark [role="listbox"] {
+    @apply bg-card/95 backdrop-blur-xl border-border shadow-2xl;
+  }
+
+  /* Custom utility for glassmorphism with better contrast */
+  .glassmorphism {
+    @apply bg-white/40 dark:bg-black/40 backdrop-blur-xl border border-white/20 dark:border-white/10 shadow-xl;
+  }
+
+  /* Ensure chart labels and tooltips are legible */
+  .recharts-cartesian-axis-tick-value {
+    fill: currentColor;
+    @apply text-[10px] md:text-sm;
+  }
+
+  .recharts-legend-item-text {
+    @apply text-foreground !important;
+  }
+
+  .recharts-tooltip-wrapper {
+    @apply outline-none !important;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  /* Glassmorphism effect */
+  .glass {
+    @apply bg-white/70 dark:bg-card/70 backdrop-blur-md;
+  }
+
+  /* Neon glow effect */
+  .neon-glow {
+    @apply shadow-[0_0_20px_hsl(var(--primary)/0.4)] dark:shadow-[0_0_30px_hsl(var(--primary)/0.5)];
+  }
+
+  .neon-border {
+    @apply border border-primary/50 dark:border-primary/70 shadow-[0_0_10px_hsl(var(--primary)/0.3)];
+  }
+
+  /* Futuristic card */
+  .futuristic-card {
+    @apply relative overflow-hidden rounded-xl border border-border/50 bg-card/80 backdrop-blur-sm;
+    @apply before:absolute before:inset-0 before:bg-gradient-to-br before:from-primary/5 before:to-transparent before:pointer-events-none;
+  }
+
+  /* Status badges */
+  .status-healthy {
+    @apply bg-primary/10 text-primary border border-primary/20;
+  }
+
+  .status-warning {
+    @apply bg-warning/10 text-warning-foreground border border-warning/30;
+  }
+
+  .status-critical {
+    @apply bg-destructive/10 text-destructive border border-destructive/20;
+  }
+
+  /* Pulse animation for health indicator */
+  .health-pulse {
+    animation: health-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes health-pulse {
+
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 hsl(var(--primary) / 0.4);
+    }
+
+    50% {
+      box-shadow: 0 0 0 15px hsl(var(--primary) / 0);
+    }
+  }
+
+  /* Critical pulse */
+  .critical-pulse {
+    animation: critical-pulse 1.5s ease-in-out infinite;
+  }
+
+  @keyframes critical-pulse {
+
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 hsl(var(--destructive) / 0.4);
+    }
+
+    50% {
+      box-shadow: 0 0 0 12px hsl(var(--destructive) / 0);
+    }
+  }
+
+  /* Warning pulse */
+  .warning-pulse {
+    animation: warning-pulse 1.8s ease-in-out infinite;
+  }
+
+  @keyframes warning-pulse {
+
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 hsl(var(--warning) / 0.4);
+    }
+
+    50% {
+      box-shadow: 0 0 0 12px hsl(var(--warning) / 0);
+    }
+  }
+
+  /* Scanning animation */
+  .scanning {
+    animation: scan 2s ease-in-out infinite;
+  }
+
+  @keyframes scan {
+
+    0%,
+    100% {
+      opacity: 0.3;
+      transform: translateY(0);
+    }
+
+    50% {
+      opacity: 1;
+      transform: translateY(100%);
+    }
+  }
+
+  /* Water droplet animation */
+  .water-drop {
+    animation: drop 1.5s ease-in-out infinite;
+  }
+
+  @keyframes drop {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(5px);
+    }
+  }
+
+  /* Gradient text */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-hero);
+  }
+
+  .text-gradient-neon {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--neon-green)) 0%, hsl(var(--neon-blue)) 100%);
+  }
+
+  /* Loading skeleton */
+  .skeleton {
+    @apply animate-pulse bg-muted rounded-md;
+  }
+
+  /* Floating animation */
+  .floating {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Slide in animations */
+  .slide-in-left {
+    animation: slideInLeft 0.5s ease-out;
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .slide-in-right {
+    animation: slideInRight 0.5s ease-out;
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Voice highlight */
+  .voice-highlight {
+    @apply ring-2 ring-primary ring-offset-2 ring-offset-background transition-all duration-300;
+  }
+
+  /* AI pattern background */
+  .ai-pattern {
+    background-image:
+      radial-gradient(circle at 20% 50%, hsl(var(--primary) / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, hsl(var(--neon-blue) / 0.1) 0%, transparent 50%);
+  }
+
+  /* Grid pattern */
+  .grid-pattern {
+    background-image:
+      linear-gradient(hsl(var(--border) / 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.3) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* Premium Animations */
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .animate-float-slow {
+    animation: float-slow 6s ease-in-out infinite;
+  }
+
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+}
+
+@layer utilities {
+
+  /* Hide scrollbar */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Perspective for 3D effects */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  /* Backdrop blur variants */
+  .backdrop-blur-xs {
+    backdrop-filter: blur(2px);
+  }
+}
