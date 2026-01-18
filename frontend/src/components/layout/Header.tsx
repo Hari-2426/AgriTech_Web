@@ -9,7 +9,8 @@ import {
   Sun,
   Globe,
   User,
-  LogOut
+  LogOut,
+  Sprout
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -92,7 +93,7 @@ export function Header({ onMenuToggle, isMenuOpen, isLoggedIn, onProfileClick }:
             animate={{ opacity: 1, x: 0 }}
           >
             <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary shadow-glow">
-              <Leaf className="h-5 w-5 text-primary-foreground" />
+              <Sprout className="h-5 w-5 text-primary-foreground" />
             </div>
             <div className="hidden sm:block">
               <h1 className="text-lg font-bold text-foreground">{t('app.name')}</h1>
